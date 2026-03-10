@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Orbitron", ui-sans-serif, system-ui, sans-serif;
+  --color-neon-blue: #00f3ff;
+  --color-neon-pink: #ff00ff;
+  --color-neon-green: #00ff00;
+  --color-dark-bg: #0a0a0f;
+  --color-dark-surface: #12121a;
+}
+
+@layer utilities {
+  .glow-blue {
+    box-shadow: 0 0 10px theme('colors.neon-blue'), 0 0 20px theme('colors.neon-blue');
+  }
+  .glow-pink {
+    box-shadow: 0 0 10px theme('colors.neon-pink'), 0 0 20px theme('colors.neon-pink');
+  }
+  .glow-green {
+    box-shadow: 0 0 10px theme('colors.neon-green'), 0 0 20px theme('colors.neon-green');
+  }
+  .text-glow-blue {
+    text-shadow: 0 0 10px theme('colors.neon-blue'), 0 0 20px theme('colors.neon-blue');
+  }
+  .text-glow-pink {
+    text-shadow: 0 0 10px theme('colors.neon-pink'), 0 0 20px theme('colors.neon-pink');
+  }
+  .text-glow-green {
+    text-shadow: 0 0 10px theme('colors.neon-green'), 0 0 20px theme('colors.neon-green');
+  }
+}
+
+body {
+  background-color: theme('colors.dark-bg');
+  color: white;
+  font-family: theme('font.sans');
+}
